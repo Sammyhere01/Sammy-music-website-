@@ -1,5 +1,7 @@
-import NowPlaying from "@/components/NowPlaying";
+import MainContent from "@/components/MainContent";
 
-const Index = () => <NowPlaying />;
+const Index = () => {
+  return <MainContent />;
+};
 
 export default Index;
