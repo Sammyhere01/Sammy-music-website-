@@ -1,4 +1,4 @@
-import { Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, Volume2, Heart } from "lucide-react";
+import { Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, Volume2, VolumeX, Heart } from "lucide-react";
 import { useMusic } from "@/contexts/MusicContext";
 import YouTubePlayer from "@/components/YouTubePlayer";
 import nowPlayingImg from "@/assets/now-playing.jpg";
@@ -22,14 +22,13 @@ const QueueItem = ({ track, isActive }: { track: any; isActive: boolean }) => {
 };
 
 const RightPanel = () => {
-  const { currentTrack, isPlaying, togglePlay, playNext, playPrev, queue } = useMusic();
+  const { currentTrack, isPlaying, togglePlay, playNext, playPrev, queue, volume, setVolume } = useMusic();
   const trackTitle = currentTrack?.title || "SONIC BLISS";
   const trackArtist = currentTrack?.channelTitle || "LUNA";
   const trackThumb = currentTrack?.thumbnail || nowPlayingImg;
 
   return (
     <aside className="w-72 xl:w-80 bg-surface-dark border-l border-border flex flex-col p-4 gap-4 shrink-0 overflow-y-auto scrollbar-cyber">
-      {/* Hidden YouTube player for audio */}
       <YouTubePlayer />
 
       {/* Now Playing */}
@@ -64,12 +63,20 @@ const RightPanel = () => {
         </button>
       </div>
 
-      {/* Volume & Like */}
+      {/* Volume */}
       <div className="flex items-center gap-3 px-2">
-        <Volume2 size={16} className="text-muted-foreground" />
-        <div className="flex-1 h-1 bg-muted rounded-full">
-          <div className="w-3/4 h-full bg-primary rounded-full" />
-        </div>
+        <button onClick={() => setVolume(volume > 0 ? 0 : 75)} className="text-muted-foreground hover:text-foreground transition-colors">
+          {volume === 0 ? <VolumeX size={16} /> : <Volume2 size={16} />}
+        </button>
+        <input
+          type="range"
+          min={0}
+          max={100}
+          value={volume}
+          onChange={(e) => setVolume(Number(e.target.value))}
+          className="flex-1 h-1 accent-primary cursor-pointer"
+        />
+        <span className="text-xs text-muted-foreground w-7 text-right">{volume}</span>
         <Heart size={16} className="text-accent cursor-pointer hover:scale-110 transition-transform" />
       </div>
 
