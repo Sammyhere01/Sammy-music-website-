@@ -28,7 +28,7 @@ const RightPanel = () => {
   const trackThumb = currentTrack?.thumbnail || nowPlayingImg;
 
   return (
-    <aside className="w-72 xl:w-80 bg-surface-dark border-l border-border flex flex-col p-4 gap-4 shrink-0 overflow-y-auto scrollbar-cyber">
+    <aside className="w-full lg:w-72 xl:w-80 bg-surface-dark lg:border-l border-border flex flex-col p-4 gap-4 shrink-0 overflow-y-auto scrollbar-cyber">
       <YouTubePlayer />
 
       {/* Now Playing */}

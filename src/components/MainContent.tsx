@@ -93,15 +93,15 @@ const MainContent = () => {
   );
 
   return (
-    <div className="flex-1 overflow-y-auto scrollbar-cyber p-6">
+    <div className="flex-1 overflow-y-auto scrollbar-cyber p-4 sm:p-6 pb-32 md:pb-6">
       {/* Hero Banner */}
-      <div className="relative rounded-2xl overflow-hidden mb-8 h-64">
+      <div className="relative rounded-2xl overflow-hidden mb-6 sm:mb-8 h-44 sm:h-64">
         <img src={heroBanner} alt="Hyperdrive" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-        <div className="absolute bottom-6 left-6">
-          <h1 className="text-4xl font-bold font-display neon-glow-green">HYPERDRIVE</h1>
-          <p className="text-muted-foreground font-body text-lg mt-1">YOUR SONIC UNIVERSE</p>
-          <button className="mt-3 px-6 py-2 bg-primary text-primary-foreground rounded-lg font-display text-sm font-bold hover:scale-105 transition-transform shadow-[0_0_15px_hsl(145_100%_50%/0.3)]">
+        <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6">
+          <h1 className="text-2xl sm:text-4xl font-bold font-display neon-glow-green">HYPERDRIVE</h1>
+          <p className="text-muted-foreground font-body text-sm sm:text-lg mt-1">YOUR SONIC UNIVERSE</p>
+          <button className="mt-2 sm:mt-3 px-4 sm:px-6 py-2 bg-primary text-primary-foreground rounded-lg font-display text-xs sm:text-sm font-bold hover:scale-105 transition-transform shadow-[0_0_15px_hsl(145_100%_50%/0.3)]">
             DIVE IN
           </button>
         </div>
@@ -117,7 +117,7 @@ const MainContent = () => {
             <Loader2 className="animate-spin text-primary" size={32} />
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {trending.map((track) => (
               <TrackCard key={track.id} track={track} />
             ))}
@@ -129,7 +129,7 @@ const MainContent = () => {
       {loadedSections.map((section, i) => (
         <div key={i} className="mb-8">
           <h2 className="text-xl font-bold font-display mb-4 neon-glow-green">{section.title}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {section.tracks.map((track) => (
               <TrackCard key={track.id} track={track} />
             ))}
