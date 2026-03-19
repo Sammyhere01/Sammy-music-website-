@@ -36,11 +36,6 @@ const Sidebar = () => {
             >
               <item.icon size={20} />
               <span className="hidden lg:block">{item.label}</span>
-              {item.badge && (
-                <span className="ml-auto hidden lg:flex w-5 h-5 rounded-full bg-accent text-accent-foreground text-xs items-center justify-center font-bold">
-                  {item.badge}
-                </span>
-              )}
             </button>
           );
         })}
