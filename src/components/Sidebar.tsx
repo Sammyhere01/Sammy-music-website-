@@ -1,4 +1,4 @@
-import { Home, Search, Compass, Upload, Settings, MessageCircle, Users, Calendar } from "lucide-react";
+import { Home, Search, Compass, Settings } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import avatarImg from "@/assets/avatar.jpg";
 
@@ -6,11 +6,7 @@ const navItems = [
   { icon: Home, label: "HOME", path: "/" },
   { icon: Search, label: "SEARCH", path: "/search" },
   { icon: Compass, label: "DISCOVER", path: "/discover" },
-  { icon: Upload, label: "UPLOAD", path: "/upload" },
   { icon: Settings, label: "SETTINGS", path: "/settings" },
-  { icon: MessageCircle, label: "MESSAGES", path: "/messages", badge: 3 },
-  { icon: Users, label: "GROUPS", path: "/groups" },
-  { icon: Calendar, label: "EVENTS", path: "/events" },
 ];
 
 const Sidebar = () => {
@@ -21,8 +17,7 @@ const Sidebar = () => {
     <aside className="w-20 lg:w-56 bg-surface-dark border-r border-border flex flex-col items-center lg:items-stretch py-6 px-2 lg:px-4 gap-2 shrink-0">
       {/* Logo */}
       <div className="flex items-center gap-2 mb-6 px-2">
-        <span className="text-primary font-display text-lg font-bold neon-glow-green hidden lg:block">HEY BUDDY</span>
-        <span className="text-primary font-display text-lg font-bold neon-glow-green lg:hidden">HB</span>
+        <span className="text-primary font-display text-lg font-bold neon-glow-green">Sammy music</span>
       </div>
 
       {/* Nav */}
@@ -41,11 +36,6 @@ const Sidebar = () => {
             >
               <item.icon size={20} />
               <span className="hidden lg:block">{item.label}</span>
-              {item.badge && (
-                <span className="ml-auto hidden lg:flex w-5 h-5 rounded-full bg-accent text-accent-foreground text-xs items-center justify-center font-bold">
-                  {item.badge}
-                </span>
-              )}
             </button>
           );
         })}
