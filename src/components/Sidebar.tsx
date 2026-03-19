@@ -1,4 +1,4 @@
-import { Home, Search, Compass, Upload, Settings, MessageCircle, Users, Calendar } from "lucide-react";
+import { Home, Search, Compass, Settings } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import avatarImg from "@/assets/avatar.jpg";
 
@@ -6,11 +6,7 @@ const navItems = [
   { icon: Home, label: "HOME", path: "/" },
   { icon: Search, label: "SEARCH", path: "/search" },
   { icon: Compass, label: "DISCOVER", path: "/discover" },
-  { icon: Upload, label: "UPLOAD", path: "/upload" },
   { icon: Settings, label: "SETTINGS", path: "/settings" },
-  { icon: MessageCircle, label: "MESSAGES", path: "/messages", badge: 3 },
-  { icon: Users, label: "GROUPS", path: "/groups" },
-  { icon: Calendar, label: "EVENTS", path: "/events" },
 ];
 
 const Sidebar = () => {
