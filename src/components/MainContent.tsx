@@ -129,7 +129,7 @@ const MainContent = () => {
       {loadedSections.map((section, i) => (
         <div key={i} className="mb-8">
           <h2 className="text-xl font-bold font-display mb-4 neon-glow-green">{section.title}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {section.tracks.map((track) => (
               <TrackCard key={track.id} track={track} />
             ))}
