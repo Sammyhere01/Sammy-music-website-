@@ -17,8 +17,7 @@ const Sidebar = () => {
     <aside className="w-20 lg:w-56 bg-surface-dark border-r border-border flex flex-col items-center lg:items-stretch py-6 px-2 lg:px-4 gap-2 shrink-0">
       {/* Logo */}
       <div className="flex items-center gap-2 mb-6 px-2">
-        <span className="text-primary font-display text-lg font-bold neon-glow-green hidden lg:block">HEY BUDDY</span>
-        <span className="text-primary font-display text-lg font-bold neon-glow-green lg:hidden">HB</span>
+        <span className="text-primary font-display text-lg font-bold neon-glow-green">Sammy music</span>
       </div>
 
       {/* Nav */}
