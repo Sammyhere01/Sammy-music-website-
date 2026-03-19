@@ -30,10 +30,6 @@ const App = () => (
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="/playlist" element={<PlaylistPage />} />
               <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/upload" element={<Index />} />
-              <Route path="/messages" element={<Index />} />
-              <Route path="/groups" element={<Index />} />
-              <Route path="/events" element={<Index />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
