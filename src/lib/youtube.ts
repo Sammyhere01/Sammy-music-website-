@@ -1,5 +1,5 @@
 // YouTube Data API v3 Service
-const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY || "AIzaSyD9tlE0TAJ33cvphorT7lG9yHuTGWoaK4A";
+const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY || "ADD YOUR YOUTUB API KEY HERE";
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 
 export interface YouTubeVideo {
